@@ -18,17 +18,22 @@ static double height30 = screenHeight/27.35;
 static double height40 = screenHeight/20.51;
 static double height45 = screenHeight/18.23;
 static double height50 = screenHeight/16.41;
+
 // dynamic width for padding and margin
+static double width05 = screenWidth/164.11;
 static double width10 = screenHeight/82.05;
 static double width15 = screenHeight/54.70;
 static double width20 = screenHeight/41.02;
 static double width30 = screenHeight/27.35;
+static double width40 = screenHeight/20.51;
+static double width45 = screenHeight/18.23;
 
 // dynamic font
 static double font20 = screenHeight/41.02;
 // dynamic radius
- static double radius15 = screenHeight/54.70;
+static double radius15 = screenHeight/54.70;
 static double radius20 = screenHeight/41.02;
 static double radius30 = screenHeight/27.35;
-
+// icon size 24
+static double iconSize24 = screenHeight/34.19;
 }

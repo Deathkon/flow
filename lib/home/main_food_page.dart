@@ -37,14 +37,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
                           SmallText(text: "Gasabo", color: Colors.black54),
                           Icon(Icons.arrow_drop_down_circle_rounded)
                         ],
-                      )
+                      ),
                     ],
                   ),
                   Center(
                     child: Container(
-                      width: 45,
-                      height: 45,
-                      child: const Icon(Icons.search, color: Colors.white),
+                      width: Dimensions.width45,
+                      height: Dimensions.height45,
+                      child: Icon(Icons.search, color: Colors.white, size: Dimensions.iconSize24),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(Dimensions.radius15),
                         color: AppColors.mainColor,
