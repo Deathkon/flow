@@ -46,7 +46,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 return _buildPageItem(position);
               }),
         ),
-    new DotsIndicator(
+
+        DotsIndicator(
     dotsCount: 5,
     position: _currentPageValue,
     decorator: DotsDecorator(
@@ -56,6 +57,18 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
     ),
     ),
+        // Popular text
+        SizedBox(height: Dimensions.height30),
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.width30),
+          child: Row(
+            children: [
+              BigText(text: "Popular", color: AppColors.mainColor),
+              SizedBox(width: Dimensions.width10),
+              SmallText(text: "Food", color: AppColors.mainColor),
+            ],
+          ),
+        )
       ],
     );
   }
