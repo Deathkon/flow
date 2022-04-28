@@ -15,6 +15,9 @@ static double height10 = screenHeight/82.05;
 static double height15 = screenHeight/54.70;
 static double height20 = screenHeight/41.02;
 static double height30 = screenHeight/27.35;
+static double height40 = screenHeight/20.51;
+static double height45 = screenHeight/18.23;
+static double height50 = screenHeight/16.41;
 // dynamic width for padding and margin
 static double width10 = screenHeight/82.05;
 static double width15 = screenHeight/54.70;
