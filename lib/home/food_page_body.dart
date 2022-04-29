@@ -67,7 +67,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               BigText(text: "Popular", color: AppColors.mainColor),
               SizedBox(width: Dimensions.width10),
               Container(
-                margin: const EdgeInsets.only(bottom: 2.5),
+                margin: EdgeInsets.only(bottom: 2.5),
                 child: BigText(
                   text: ".",
                   color: Colors.black26),
@@ -80,7 +80,36 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
             ],
           ),
-        )
+        ),
+        // List of food and images
+        Container(
+         height: 900,
+          child:  ListView.builder(
+            physics: AlwaysScrollableScrollPhysics(),
+            shrinkWrap: true,
+              itemCount: 10,
+              itemBuilder: (context, index){
+                return Container(
+                  margin: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 120,
+                        height: 120,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(Dimensions.radius20),
+                          color: Colors.white38,
+                          image:  DecorationImage(
+                            image: AssetImage(
+                                "assets/image/food0.png"),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }),
+        ),
       ],
     );
   }
