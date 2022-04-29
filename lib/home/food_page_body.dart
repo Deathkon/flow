@@ -1,6 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flow/utils/dimensions.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flow/utils/colors.dart';
 import 'package:flow/widgets/big_text.dart';
@@ -46,7 +46,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 return _buildPageItem(position);
               }),
         ),
-
+        // Dots
         DotsIndicator(
     dotsCount: 5,
     position: _currentPageValue,
@@ -62,10 +62,22 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         Container(
           margin: EdgeInsets.only(left: Dimensions.width30),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               BigText(text: "Popular", color: AppColors.mainColor),
               SizedBox(width: Dimensions.width10),
-              SmallText(text: "Food", color: AppColors.mainColor),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2.5),
+                child: BigText(
+                  text: ".",
+                  color: Colors.black26),
+              ),
+              SizedBox(width: Dimensions.width10),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2),
+                child: SmallText(
+                  text: "Food"),
+              ),
             ],
           ),
         )

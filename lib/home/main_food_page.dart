@@ -1,6 +1,4 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flow/home/food_page_body.dart';
 import 'package:flow/utils/colors.dart';
