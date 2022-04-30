@@ -247,7 +247,22 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     ),
                     SizedBox(height: Dimensions.height20),
                     // time and distance
-
+                    Row(
+                      children: [
+                        IconAndTextWidget(
+                            icon: Icons.circle_sharp,
+                            text: "Normal",
+                            iconColor: AppColors.iconColor1),
+                        IconAndTextWidget(
+                            icon: Icons.location_on,
+                            text: "2.3km",
+                            iconColor: AppColors.mainColor),
+                        IconAndTextWidget(
+                            icon: Icons.access_time_rounded,
+                            text: "40 hour",
+                            iconColor: AppColors.iconColor2)
+                      ],
+                    ),
                   ],
                 ),
               ),

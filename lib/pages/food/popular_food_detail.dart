@@ -1,6 +1,11 @@
 import 'package:flow/utils/dimensions.dart';
 import 'package:flow/widgets/app_icon.dart';
+import 'package:flow/widgets/icon_and_text_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../../utils/colors.dart';
+import '../../widgets/big_text.dart';
+import '../../widgets/small_text.dart';
 
 class PopularFoodDetails extends StatelessWidget {
   const PopularFoodDetails({Key? key}) : super(key: key);
@@ -48,6 +53,51 @@ class PopularFoodDetails extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(Dimensions.radius20),
                   color: Colors.white,
+                ),
+                child:  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    BigText(text: "Chinese Side"),
+                    SizedBox(height: Dimensions.height10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Wrap(
+                          children: List.generate(5, (index) { return
+                            Icon(
+                              Icons.star,
+                              color: AppColors.mainColor,
+                              size: 15,
+                            );
+                          }),
+                        ),
+                        SizedBox(width: Dimensions.width10),
+                        SmallText(text: "4.5"),
+                        SizedBox(width: Dimensions.width10),
+                        SmallText(text: "1287"),
+                        SizedBox(width: Dimensions.width10),
+                        SmallText(text: "Comments")
+                      ],
+                    ),
+                    SizedBox(height: Dimensions.height20),
+                    // time and distance
+                    Row(
+                      children: [
+                        IconAndTextWidget(
+                            icon: Icons.circle_sharp,
+                            text: "Normal",
+                            iconColor: AppColors.iconColor1),
+                        IconAndTextWidget(
+                            icon: Icons.location_on,
+                            text: "2.3km",
+                            iconColor: AppColors.mainColor),
+                        IconAndTextWidget(
+                            icon: Icons.access_time_rounded,
+                            text: "40 hour",
+                            iconColor: AppColors.iconColor2)
+                      ],
+                    ),
+                  ],
                 ),
             ),
           ),
