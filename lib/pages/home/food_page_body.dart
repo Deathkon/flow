@@ -222,7 +222,6 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 padding: EdgeInsets.only(top: Dimensions.height15, left: Dimensions.height15, right: Dimensions.height15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-
                   children: [
                     BigText(text: "Chinese Side"),
                     SizedBox(height: Dimensions.height10),
@@ -252,9 +251,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                   ],
                 ),
               ),
-
             ),
-          )
+          ),
         ],
       ),
     );
