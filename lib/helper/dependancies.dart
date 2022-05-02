@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 
 Future<void> init() async{
   // For Api Client
-  Get.lazyPut(()=>ApiClient(appBaseUrl: "http://mvs.bslmeiyu.com"));
+  Get.lazyPut(()=>ApiClient(appBaseUrl: "https://mvs.bslmeiyu.com"));
   // For repositories
-  Get.lazyPut(() => PopularProductRepo(apiClient: Get.find()));
+  Get.lazyPut(() => PopularProductRepo(apiClient:Get.find()));
   // For Controllers
-  Get.lazyPut(() => PopularProductController(popularProductRepo: Get.find()));
+  Get.lazyPut(() => PopularProductController(popularProductRepo:Get.find()));
 }
