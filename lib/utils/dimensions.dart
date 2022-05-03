@@ -6,7 +6,7 @@ class Dimensions{
  // full container dynamic
  static double pageView = screenHeight/2.56;
 
-// 3.72 is a scale factor of our screeh height we took the screen height / 220
+// 3.72 is a scale factor of our screen height we took the screen height / 220
  static double pageViewContainer = screenHeight/3.72;
  // 6.83 is a scale factor of our text we took screen height / 120
  static double pageViewTextContainer = screenHeight/6.83;

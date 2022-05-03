@@ -1,7 +1,9 @@
-import 'package:flow/pages/food/recommended_food_details.dart';
+ import 'package:flow/pages/home/main_food_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'controllers/popular_product_controller.dart';
+import 'controllers/recommended_product_controller.dart';
 import 'helper/dependancies.dart' as dep;
 
 Future<void> main() async {
@@ -16,13 +18,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.find<PopularProductController>().getPopularProductList();
+    Get.find<RecommendedProductController>().getRecommendedProductList();
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flow',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RecommendedFoodDetail(),
+      home: MainFoodPage(),
       // MainFoodPage(),
     );
   }
