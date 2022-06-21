@@ -46,7 +46,7 @@ class RecommendedFoodDetail extends StatelessWidget {
                         },
                           child: AppICon(icon: Icons.shopping_cart_outlined),
                       ),
-                      // ? itenary operator here is used for checking
+                      // ?itinerary operator here is used for checking
                       Get.find<PopularProductController>().totalItems>=1?
                       Positioned(
                         right: 0, top:0,

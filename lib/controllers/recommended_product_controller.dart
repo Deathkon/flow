@@ -1,4 +1,3 @@
-// import 'package:flow/data/repository/popular_product_repo.dart';
 import 'package:flow/data/repository/recommended_product_repo.dart';
 import 'package:flow/models/products_model.dart';
 import 'package:get/get.dart';
@@ -16,10 +15,11 @@ class RecommendedProductController extends GetxController{
     Response response = await recommendedProductRepo.getRecommendedProductList();
     if(response.statusCode==200){
       _recommendedProductList = [];
+      _recommendedProductList.addAll(Product.fromJson(response.body).products);
       _isLoaded = true;
       update();
     }else{
-      print("flow app: could not get recommended product list");
+
     }
   }
 }
