@@ -1,7 +1,7 @@
 import 'package:flow/controllers/cart_controller.dart';
 import 'package:flow/controllers/popular_product_controller.dart';
-import 'package:flow/pages/cart/cart_page.dart';
-import 'package:flow/pages/home/main_food_page.dart';
+// import 'package:flow/pages/cart/cart_page.dart';
+// import 'package:flow/pages/home/main_food_page.dart';
 import 'package:flow/routes/route_helper.dart';
 import 'package:flow/utils/app_constants.dart';
 import 'package:flow/utils/colors.dart';
