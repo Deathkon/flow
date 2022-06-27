@@ -23,6 +23,7 @@ class CartController extends GetxController{
             quantity: value.quantity!+quantity,
             isExist: true,
             time: DateTime.now().toString(),
+            product: product,
           );
         });
         if(totalQuantity<=0){
@@ -43,6 +44,7 @@ class CartController extends GetxController{
               //isExist is a boolean
               isExist: true,
               time: DateTime.now().toString(),
+              product: product,
             );
           });
         }else{
@@ -52,6 +54,7 @@ class CartController extends GetxController{
           );
         }
       }
+      update();
     }
     bool existInCart(ProductModel product) {
      if (_items.containsKey(product.id)) {
@@ -86,5 +89,13 @@ class CartController extends GetxController{
       return _items.entries.map((e){
        return e.value;
   }).toList(); // toList is converting a map into List
+  }
+
+  int get totalAmount{
+      var total = 0;
+      _items.forEach((key, value) {
+        total += value.quantity!*value.price!;
+      });
+      return total;
   }
 }
